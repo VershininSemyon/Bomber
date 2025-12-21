@@ -1,0 +1,17 @@
+
+# Окружения
+venv
+.venv
+env
+.env
+
+# Конфиги
+.idea
+.vscode
+
+# Кэш
+__pycache__
+*.pyc
+
+# Логи
+*.log
