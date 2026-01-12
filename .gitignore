@@ -1,17 +1,23 @@
 
-# Окружения
-venv
+# Специфичные файлы для Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.python-version
+
+# Переменные окружения
 .venv
-env
+venv
 .env
+env
 
 # Конфиги
 .idea
 .vscode
-
-# Кэш
-__pycache__
-*.pyc
+*.lock
 
 # Логи
 *.log

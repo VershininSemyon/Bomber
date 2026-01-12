@@ -1,14 +1,14 @@
 
 FROM python:3.12-slim
 
+RUN pip install uv
+
 WORKDIR /app
 
-COPY requirements.txt .
+COPY pyproject.toml uv.lock* ./
 
-RUN pip install -r requirements.txt
+RUN uv sync --frozen
 
 COPY . .
 
-EXPOSE 2009
-
-CMD [ "python3", "main.py" ]
+CMD ["uv", "run", "main.py"]
